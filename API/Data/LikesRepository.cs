@@ -32,7 +32,7 @@ public class LikesRepository(AppDbContext context) : ILikesRepository
             .FindAsync(sourceMemberId, targetMemberId);
     }
 
-    public async Task<ActionResult<PaginatedResult<Member>>> GetMemberLikes([FromQuery] LikesParams likesParams)
+    public async Task<PaginatedResult<Member>> GetMemberLikes(LikesParams likesParams)
     {
         var query = context.Likes.AsQueryable();
         IQueryable<Member> result;

@@ -42,7 +42,7 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
             _ => query.OrderByDescending(x => x.LastActive)
         };
 
-        return await PaginationHelper.CreateAsync(query, memberParams.pageNumber, memberParams.PageSize);
+        return await PaginationHelper.CreateAsync(query, memberParams.PageNumber, memberParams.PageSize);
     }
 
     public async Task<IReadOnlyList<Photo>> GetPhotosForMemberAsync(string memberId)
