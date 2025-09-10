@@ -26,7 +26,7 @@ export class Lists implements OnInit {
   ]
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.loadLikes();
   }
 
   setPredicate(predicate: string): void {

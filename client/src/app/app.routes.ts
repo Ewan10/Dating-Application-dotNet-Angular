@@ -34,7 +34,7 @@ export const routes: Routes = [
                         canDeactivate: [preventUnsavedChangesGuard]
                     },
                     { path: 'photos', component: MemberPhotos, title: 'Photos' },
-                    { path: 'messages', component: MemberMessages, title: 'Mssages' },
+                    { path: 'messages', component: MemberMessages, title: 'Messages' },
 
                 ]
             },

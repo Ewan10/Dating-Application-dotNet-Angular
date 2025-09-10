@@ -13,7 +13,7 @@
         <app-paginator [hidden]="metadata.totalCount === 0" [pageNumber]="metadata.currentPage"
             [pageSize]="metadata.pageSize" [totalCount]="metadata.totalCount" [totalPages]="metadata.totalPages"
             (pageChange)="onPageChange($event)" />
-        />
+
         }
     </div>
     @if (paginatedResult.items; as members) {
