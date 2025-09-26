@@ -1,1 +1,4 @@
-{}
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8a31523c-a9d8-4068-8d6b-24640f817c1a/resourceGroups/Dating-app/providers/Microsoft.Web/sites/dating-site",
+    "appService.deploySubpath": "API\\bin\\Publish"
+}
