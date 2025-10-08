@@ -43,9 +43,9 @@ export class UserManagement implements OnInit {
   updateRoles() {
     if (!this.selectedUser) return;
     this.adminService.updateUserRoles(this.selectedUser.id, this.selectedUser.roles).subscribe({
-      next: updateRoles => {
+      next: updatedRoles => {
         this.users.update(users => users.map(u => {
-          if (u.id === this.selectedUser?.id) u.roles = updateRoles;
+          if (u.id === this.selectedUser?.id) u.roles = updatedRoles;
           return u;
         }));
         this.rolesModal.nativeElement.close();

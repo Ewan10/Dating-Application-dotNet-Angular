@@ -31,7 +31,7 @@ public class AdminController(UserManager<AppUser> userManager) : BaseApiControll
 
     [Authorize(Policy = "RequireAdminRole")]
     [HttpPost("edit-roles/{userId}")]
-    public async Task<ActionResult> EditRoles(string userId, [FromQuery] string roles)
+    public async Task<ActionResult<IList<string>>> EditRoles(string userId, [FromQuery] string roles)
     {
         if (string.IsNullOrEmpty(roles)) return BadRequest("You must select at least one role");
 

@@ -277,13 +277,13 @@ namespace API.Data.Migrations
                         new
                         {
                             Id = "moderator-id",
-                            Name = "Member",
+                            Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
                             Id = "admin-id",
-                            Name = "Member",
+                            Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
                 });
