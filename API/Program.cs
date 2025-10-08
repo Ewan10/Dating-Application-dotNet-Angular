@@ -14,10 +14,18 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<AppDbContext>(option =>
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection")
+                       ?? builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    option.UseSqlServer(builder.Configuration["DefaultConnection"]);
+    options.UseSqlServer(connectionString);
 });
+
+// builder.Services.AddDbContext<AppDbContext>(option =>
+// {
+//     option.UseSqlServer(builder.Configuration["DefaultConnection"]);
+// });
 
 // GetConnectionString("DefaultConnection")
 builder.Services.AddCors();
