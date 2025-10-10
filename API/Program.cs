@@ -14,12 +14,13 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-var connectionString = Environment.GetEnvironmentVariable("DefaultConnection")
-                       ?? builder.Configuration.GetConnectionString("DefaultConnection");
+
+// var connectionString = Environment.GetEnvironmentVariable("DefaultConnection")
+//                        ?? builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(connectionString);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 // builder.Services.AddDbContext<AppDbContext>(option =>
