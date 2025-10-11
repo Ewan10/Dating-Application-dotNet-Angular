@@ -8,7 +8,7 @@ This project was implemented in VSCode by the use of Angular v.20, ASP.NET Core,
 
 ![Screenshots](/Screenshots/Home.png)
 
-![Screenshots](/Screenshots/Members.png)
+![Screenshots](/Screenshots/Members_1.png)
 
 ![Screenshots](/Screenshots/Messages_1.png)
 
